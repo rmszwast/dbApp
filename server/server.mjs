@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-const port = 4669;
+const port = process.env.PORT || 4668;
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
