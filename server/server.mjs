@@ -257,6 +257,10 @@ app.put("/api/:table", async (req, res) => {
         }
       });
       break;
+    default:
+      updateVals.forEach(([k, v], i, arr) => {
+        arr[i] = `${pool.escapeId(k)} = ${pool.escape(v)}`;
+      });
   }
   const query = `UPDATE ?? SET ${updateVals.join(", ")} WHERE ${updateCond.map(() => "?").join(" AND ")};`;
   pool.query(query, [tbl, ...updateCond], (error, results) => {
@@ -290,4 +294,3 @@ app.delete("/api/:table", async (req, res) => {
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, "..", "app", "build", "index.html"));
 });
-
