@@ -9,7 +9,6 @@ function Home() {
         Catalogs the results of the Stack Exchange 2023 Developer Survery.<br/>
         Contains Responses from over 89k developers from 185 countries.<br/>
       </p>
-      <p>
         Provides usage statistics for:<br/>
         <ul>
           <li>50 programming languages</li> 
@@ -22,7 +21,6 @@ function Home() {
           <li>20 AI tools</li>
           <li>and more!</li>
         </ul>
-      </p>
       <h2>Tables</h2>
       <h3><Link to={"/developers"}>Developers</Link></h3>
       <span>Records various demographic information about surveyed developers.</span>
