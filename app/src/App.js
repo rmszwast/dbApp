@@ -1,6 +1,7 @@
 import axios from "axios";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from "./pages/Home";
+import Languages from "./pages/Languages";
 import DevLanguages from "./pages/DevLanguages";
 //import './App.css';
 import { randomId } from '@mui/x-data-grid-generator';
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           {/* Pass getRows and getCol to each page using CrudTable */}
           <Route path="/developer-languages" element={<DevLanguages getRows={getRows} getCol={getCol} />} />
+          <Route path="/languages" element={<Languages getRows={getRows} getCol={getCol} />} />
         </Routes>
       </Router>
     </div>

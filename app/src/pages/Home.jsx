@@ -24,7 +24,7 @@ function Home() {
       <h2>Tables</h2>
       <h3>Developers</h3>
       <span>Records various demographic information about surveyed developers.</span>
-      <h3>Languages</h3>
+      <h3><Link to={'/languages'}>Languages</Link></h3>
       <span>Records the name of various programming languages.</span>
       <h3>Platforms</h3>
       <span>Records the name of various programming platforms.</span>
