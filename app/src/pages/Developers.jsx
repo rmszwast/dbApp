@@ -127,7 +127,7 @@ export default function Developers({getRows, getCol}) {
           updateVals:
             {
               DeveloperId: newRow.DeveloperId,
-              Country: newRow.Name,
+              Country: newRow.Country === 'NULL'? null : newRow.Country,
               DevType: newRow.DevType,
               Age: newRow.Age,
               EdLevel: newRow.EdLevel,
@@ -192,6 +192,7 @@ export default function Developers({getRows, getCol}) {
       selectVals.platNames = await getCol('platforms/Name');
       selectVals.techNames = await getCol('technologies/Name');
       selectVals.countries = await getCol('countries/Name');
+      selectVals.countries.push("NULL");
       setSelectVals({...selectVals});
     })();
   }, []);
