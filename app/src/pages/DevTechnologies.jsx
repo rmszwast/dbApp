@@ -42,7 +42,7 @@ export default function DevTechnologies({getRows, getCol}) {
     },
     {
       field: 'HaveWorkedWith',
-      headerName: 'Worked With?',
+      headerName: 'Have Worked With?',
       width: 220,
       editable: true,
       type: 'singleSelect',

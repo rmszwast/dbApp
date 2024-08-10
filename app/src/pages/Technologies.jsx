@@ -65,7 +65,7 @@ export default function Technologies({getRows, getCol}) {
         {
           updateCond:
             {
-                TechnologyId: oldRow.TechnologyId,
+              TechnologyId: oldRow.TechnologyId,
             },
           updateVals:
             {
