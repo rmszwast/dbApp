@@ -12,19 +12,20 @@ export default function Developers({getRows, getCol}) {
   const columns = [
     {
       field: 'DeveloperId',
-      headerName: 'Developer ID#',
+      headerName: 'Developer ID',
       width: 220,
       editable: true, 
       type: 'integer'           
     },
     {
     /* set this up to display country name */
-      field: 'Name',
+      field: 'Country',
       headerName: 'Country',
-      width: 200,
+      width: 220,
       editable: true,
       type: 'singleSelect',
-      valueOptions: selectVals.Name,          },
+      valueOptions: selectVals.countries,          
+    },
     {
       field: 'DevType',
       headerName: 'Developer Type',
@@ -36,7 +37,7 @@ export default function Developers({getRows, getCol}) {
     {
       field: 'Age',
       headerName: 'Age Range',
-      width: 200,
+      width: 220,
       align: 'left',
       headerAlign: 'left',
       editable: true,
@@ -51,7 +52,7 @@ export default function Developers({getRows, getCol}) {
     },
     {
       field: 'YearsCodePro',
-      headerName: 'Experience (in years)',
+      headerName: 'Years Experience',
       width: 220,
       align: 'left',
       headerAlign: 'left',
@@ -69,7 +70,7 @@ export default function Developers({getRows, getCol}) {
     },
     {
       field: 'ConvertedCompYearly',
-      headerName: 'Annual Wage in $',
+      headerName: 'Compensation Total USD',
       width: 220,
       align: 'left',
       headerAlign: 'left',
@@ -125,6 +126,7 @@ export default function Developers({getRows, getCol}) {
             },
           updateVals:
             {
+              DeveloperId: newRow.DeveloperId,
               Country: newRow.Name,
               DevType: newRow.DevType,
               Age: newRow.Age,
