@@ -25,7 +25,7 @@ export default function DevLanguages({getRows, getCol}) {
       width: 220,
       editable: true,
       type: 'singleSelect',
-      valueOptions: selectVals.devId,
+      valueOptions: selectVals.devIds,
     },
     {
       field: 'DevType',
@@ -52,7 +52,7 @@ export default function DevLanguages({getRows, getCol}) {
     },
     {
       field: 'HaveWorkedWith',
-      headerName: 'Worked With?',
+      headerName: 'Have Worked With?',
       width: 220,
       editable: true,
       type: 'singleSelect',
@@ -167,7 +167,7 @@ export default function DevLanguages({getRows, getCol}) {
     (async () => {
       setRows(await getRows(path));
       const o = {}
-      selectVals.devId = await getCol('developers/DeveloperId');
+      selectVals.devIds = await getCol('developers/DeveloperId');
       selectVals.langNames = await getCol('languages/Name');
       selectVals.platNames = await getCol('platforms/Name');
       selectVals.techNames = await getCol('technologies/Name');
