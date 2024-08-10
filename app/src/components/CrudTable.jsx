@@ -72,6 +72,10 @@ export default function FullFeaturedCrudGrid({rows, setRows, columns, onInsert, 
     if (editedRow.isNew) {
       setRows(rows.filter((row) => row.id !== id));
     }
+    /*         /* Need a special case for when the FK is NULL to delete the developer without a country
+            if (CountryNull) {
+              this.deleteCond: {
+                DeveloperId: row.DeveloperId */
   };
 
   const processRowUpdate = (newRow, oldRow) => {
