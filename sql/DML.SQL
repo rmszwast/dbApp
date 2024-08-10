@@ -10,7 +10,7 @@
 SELECT a.DeveloperId, a.DevType, b.Name AS Country, a.Age, a.EdLevel,
     a.YearsCodePro, a.CompTotal, a.ConvertedCompYearly
 FROM DEVELOPERS AS a
-JOIN COUNTRIES AS b ON a.CountryId = b.CountryId;
+LEFT JOIN COUNTRIES AS b ON a.CountryId = b.CountryId;
 
 -- Get all programming languages
 SELECT *

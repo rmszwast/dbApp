@@ -109,7 +109,7 @@ app.get("/api/:table/:column?", (req, res) => {
           "a.DeveloperId, a.DevType, b.Name AS Country, a.Age, a.EdLevel, ",
           "a.YearsCodePro, a.CompTotal, a.ConvertedCompYearly"
         );
-        fromTbl = "DEVELOPERS AS a JOIN COUNTRIES AS b ON a.CountryId = b.CountryId";
+        fromTbl = "DEVELOPERS AS a LEFT JOIN COUNTRIES AS b ON a.CountryId = b.CountryId";
       } 
       break;
     case "LANGUAGES":
