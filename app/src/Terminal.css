@@ -1,0 +1,105 @@
+/* Natasha & Ryan CSS
+
+/* Theme: Terminal Window */
+
+/*   ----- Variables  -----  */
+:root {
+ 
+    --terminalGrey: #221e2b;
+    --neonGreen: #00bb10;
+    --softWhite: #d8ead5;
+    --darkGreen: #022601;
+    --oliveGreen: #60664C;
+    --navyBlue: #05060B;
+    --lightGreenTransparent: #91f296e6;
+    --brightOrange: #ff3300;
+  }
+
+  body {
+    background-color: var(--terminalGrey);
+    color: var(--neonGreen) ;
+    font-size: 1em;
+    line-height: 1.2;
+    margin:2%;
+    padding:2%;
+    font-family :-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
+      'Ubuntu' 'Cantarell' 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+/*  ----- Page layout blocks -----  */
+header, footer {
+    padding: 0.5em;
+    background-color: var(--lightGreenTransparent);
+    color: var(--neonGreen)
+  }
+  
+  main {
+    background-color: var(--lightBlueTransparent);
+  }
+  section {
+    padding: 10px;
+  }
+  article {
+    padding: 10px;
+    border-top: 2px dotted var(--softWhite);
+    border-right: 2px dashed var(--navyBlue);
+    border-bottom: 2px solid var(--navyBlue);
+    border-left: 2px groove var(--navyBlue);
+  }
+
+  /*  ----- Table ----- */
+
+  table, th, td {
+      border: 1px solid white ;
+      border-collapse: collapse;
+      padding: 4px ;
+      background-color: #141416;;
+      color: var(--neonGreen);
+    } ;
+
+    .App-header {
+        background-color: #141416;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+      }
+
+
+
+/*  ----- Form ----- */
+button {
+    padding: 0.5em;
+    background-color: #141416;;
+    color: var(--neonGreen);
+    width: 40%;
+    height: 50px;
+    border-radius: 16px;
+    font-weight:bold;
+    font-size: 1em;
+  }
+  button:hover {
+    background-color: var(--softWhite);
+    color:var(--neonGreen);
+  }
+
+.actions {
+    background-color: #141416;
+    color: var(--neonGreen);
+}
+
+.MuiDataGrid-row,.MuiDataGrid-footerContainer,.MuiSelect-standard {
+    background-color: black;
+    color: green;
+}

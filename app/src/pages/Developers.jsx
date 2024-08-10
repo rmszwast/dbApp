@@ -88,7 +88,7 @@ export default function Developers({getRows, getCol}) {
         process.env.REACT_APP_API_URL + path,
           {
             DeveloperId: newRow.DeveloperId,
-            Country: newRow.Name,
+            Country: newRow.Country,
             DevType: newRow.DevType,
             Age: newRow.Age,
             EdLevel: newRow.EdLevel,

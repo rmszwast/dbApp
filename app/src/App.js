@@ -9,7 +9,7 @@ import Technologies from "./pages/Technologies";
 import DevTechnologies from "./pages/DevTechnologies";
 import Developers from "./pages/Developers";
 import Countries from "./pages/Countries";
-//import './App.css';
+import './App.css';
 import { randomId } from '@mui/x-data-grid-generator';
 
 const getRows = async (path) => {
@@ -27,7 +27,9 @@ const getRows = async (path) => {
   }
 }
 
+/* Retrieve data to populate the columns */
 const getCol = async (path) => {
+  /* Seperate the key value pair by seperating its path */
   const column = path.split('/').at(-1);
   try {
     const res = await axios.get(process.env.REACT_APP_API_URL + path);
@@ -56,7 +58,6 @@ export default function App() {
            <Route path="/developer-platforms" element={<DevPlatforms getRows={getRows} getCol={getCol} />} />
            <Route path="/technologies" element={<Technologies getRows={getRows} getCol={getCol} />} />
            <Route path="/developer-technologies" element={<DevTechnologies getRows={getRows} getCol={getCol} />} />
-
         </Routes>
       </Router>
     </div>
