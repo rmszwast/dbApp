@@ -156,6 +156,11 @@ export default function FullFeaturedCrudGrid({rows, setRows, columns, onInsert, 
       <DataGrid
         rows={rows}
         columns={columns}
+        columnVisibilityModel={{
+          LanguageId: false,
+          PlatformId: false,
+          TechnologyId: false,
+        }}
         editMode="row"
         rowModesModel={rowModesModel}
         onRowModesModelChange={handleRowModesModelChange}
