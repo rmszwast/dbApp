@@ -1,3 +1,5 @@
+// adapted from https://github.com/mui/mui-x/blob/v7.12.1/docs/data/data-grid/editing/FullFeaturedCrudGrid.js
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -160,6 +162,7 @@ export default function FullFeaturedCrudGrid({rows, setRows, columns, onInsert, 
           LanguageId: false,
           PlatformId: false,
           TechnologyId: false,
+          CountryId: false,
         }}
         editMode="row"
         rowModesModel={rowModesModel}
