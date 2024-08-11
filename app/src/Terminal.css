@@ -2,6 +2,11 @@
 
 /* Theme: Terminal Window */
 
+/*   ----- Imports  -----  */
+/*  
+    Source: https://css-tricks.com/old-timey-terminal-styling/
+*/
+
 /*   ----- Variables  -----  */
 :root {
  
@@ -10,13 +15,12 @@
     --softWhite: #d8ead5;
     --darkGreen: #022601;
     --oliveGreen: #60664C;
-    --navyBlue: #05060B;
+    --terminalBlack: #05060B;
     --lightGreenTransparent: #91f296e6;
-    --brightOrange: #ff3300;
   }
 
   body {
-    background-color: var(--terminalGrey);
+/*    background-color: var(--terminalGrey);
     color: var(--neonGreen) ;
     font-size: 1em;
     line-height: 1.2;
@@ -26,8 +30,39 @@
       'Ubuntu' 'Cantarell' 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale; */
+    background-color: black;
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.75), black 120%
+        );
+    height: 100vh;
+    text-align: center;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: repeating-linear-gradient(
+              0deg,
+              rgba(black, 0.15),
+              rgba(black, 0.15) 1px,
+              transparent 1px,
+              transparent 2px
+            );
+    pointer-events: none;
+          }
     }
+
+/* This removes the blurry text effect */
+    ::selection {
+        background: #37ff00;
+        text-shadow: none;
+      }
   
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -37,12 +72,13 @@
 /*  ----- Page layout blocks -----  */
 header, footer {
     padding: 0.5em;
-    background-color: var(--lightGreenTransparent);
-    color: var(--neonGreen)
+    color: var(--neonGreen);
+    background-color: var(--terminalBlack);
+
   }
   
   main {
-    background-color: var(--lightBlueTransparent);
+    background-color: var(--terminalGrey);
   }
   section {
     padding: 10px;
@@ -53,6 +89,25 @@ header, footer {
     border-right: 2px dashed var(--navyBlue);
     border-bottom: 2px solid var(--navyBlue);
     border-left: 2px groove var(--navyBlue);
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--terminalGrey);
+    color: var(--neonGreen) ;
+    /* Add a style for links */
+  }
+
+  h3 {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: var(--terminalGrey);
+        color: var(--neonGreen) ;
+      }
   }
 
   /*  ----- Table ----- */
@@ -100,6 +155,37 @@ button {
 }
 
 .MuiDataGrid-row,.MuiDataGrid-footerContainer,.MuiSelect-standard {
+    background-color: var(--terminalGrey);
+    color: green;
+    text-shadow: none;
+}
+
+/* Hyperlinks */
+a:-webkit-any-link {
+    color: var(--neonGreen);
+    text-decoration: underline;
+    text-shadow: 0 0 10px  #000000;
+}
+
+.css-rbjqkq-MuiDataGrid-root  {
+    background-color: #141416;
+    color: var(--neonGreen);
+}
+
+.MuiTablePagination-selectLabel, MuiSelect-select-MuiInputBase-input {
+    background-color: #141416;
+    color: var(--neonGreen);
+}
+.MuiButtonBase-root-MuiIconButton-root, MuiList-root-MuiMenu-list
+{
     background-color: black;
     color: green;
+}
+.App {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: var(--neonGreen) ;
+      }
 }

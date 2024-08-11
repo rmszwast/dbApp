@@ -9,7 +9,7 @@ import Technologies from "./pages/Technologies";
 import DevTechnologies from "./pages/DevTechnologies";
 import Developers from "./pages/Developers";
 import Countries from "./pages/Countries";
-import './App.css';
+import './Terminal.css';
 import { randomId } from '@mui/x-data-grid-generator';
 
 const getRows = async (path) => {
