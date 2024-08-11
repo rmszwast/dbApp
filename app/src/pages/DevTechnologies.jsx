@@ -18,14 +18,6 @@ export default function DevTechnologies({getRows, getCol}) {
       valueOptions: selectVals.devId,
     },
     {
-      field: 'DevType',
-      headerName: 'Developer Type',
-      width: 220,
-      align: 'left',
-      headerAlign: 'left',
-      editable: false,
-    },
-    {
       field: 'TechnologyId',
       headerName: 'Technology ID',
       type: 'string',
@@ -42,7 +34,7 @@ export default function DevTechnologies({getRows, getCol}) {
     },
     {
       field: 'HaveWorkedWith',
-      headerName: 'Worked With?',
+      headerName: 'Have Worked With?',
       width: 220,
       editable: true,
       type: 'singleSelect',
