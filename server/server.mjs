@@ -135,8 +135,7 @@ app.get("/api/:table/:column?", (req, res) => {
       }
       else {
         selectCol = "".concat(
-          "a.DeveloperId, b.DevType, a.LanguageId, ",
-          "c.Name, a.HaveWorkedWith, a.WantToWorkWith"
+          "a.DeveloperId, a.LanguageId, c.Name, a.HaveWorkedWith, a.WantToWorkWith"
         )
         fromTbl = "".concat(
           "DEVELOPER_LANGUAGES AS a ",
@@ -152,8 +151,7 @@ app.get("/api/:table/:column?", (req, res) => {
       }
       else {
         selectCol = "".concat(
-          "a.DeveloperId, b.DevType, a.PlatformId, ",
-          "c.Name, a.HaveWorkedWith, a.WantToWorkWith"
+          "a.DeveloperId, a.PlatformId, c.Name, a.HaveWorkedWith, a.WantToWorkWith"
         )
         fromTbl = "".concat(
           "DEVELOPER_PLATFORMS AS a ",
@@ -169,8 +167,7 @@ app.get("/api/:table/:column?", (req, res) => {
       }
       else {
         selectCol = "".concat(
-          "a.DeveloperId, b.DevType, a.TechnologyId, ",
-          "c.Name, a.HaveWorkedWith, a.WantToWorkWith"
+          "a.DeveloperId, a.TechnologyId, c.Name, a.HaveWorkedWith, a.WantToWorkWith"
         )
         fromTbl = "".concat(
           "DEVELOPER_TECHNOLOGIES AS a ",

@@ -29,22 +29,19 @@ SELECT *
 FROM COUNTRIES;
 
 -- Get all languages used by developers
-SELECT a.DeveloperId, b.DevType, a.LanguageId,
-    c.Name, a.HaveWorkedWith, a.WantToWorkWith
+SELECT a.DeveloperId, a.LanguageId, c.Name, a.HaveWorkedWith, a.WantToWorkWith
 FROM DEVELOPER_LANGUAGES AS a
 JOIN DEVELOPERS AS b ON a.DeveloperId = b.DeveloperId
 JOIN LANGUAGES AS c ON a.LanguageId = c.LanguageId;
 
 -- Get all platforms used by developers
-SELECT a.DeveloperId, b.DevType, a.PlatformId,
-    c.Name, a.HaveWorkedWith, a.WantToWorkWith
+SELECT a.DeveloperId, a.PlatformId, c.Name, a.HaveWorkedWith, a.WantToWorkWith
 FROM DEVELOPER_PLATFORMS AS a
 JOIN DEVELOPERS AS b ON a.DeveloperId = b.DeveloperId
 JOIN PLATFORMS AS c ON a.PlatformId = c.PlatformId;
 
 -- Get all technologies used by developers
-SELECT a.DeveloperId, b.DevType, a.TechnologyId,
-    c.Name, a.HaveWorkedWith, a.WantToWorkWith
+SELECT a.DeveloperId, a.TechnologyId, c.Name, a.HaveWorkedWith, a.WantToWorkWith
 FROM DEVELOPER_TECHNOLOGIES AS a
 JOIN DEVELOPERS AS b ON a.DeveloperId = b.DeveloperId
 JOIN TECHNOLOGIES AS c ON a.TechnologyId = c.TechnologyId;
