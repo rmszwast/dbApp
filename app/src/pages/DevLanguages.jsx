@@ -28,14 +28,6 @@ export default function DevLanguages({getRows, getCol}) {
       valueOptions: selectVals.devIds,
     },
     {
-      field: 'DevType',
-      headerName: 'Developer Type',
-      width: 220,
-      align: 'left',
-      headerAlign: 'left',
-      editable: false,
-    },
-    {
       field: 'LanguageId',
       headerName: 'Language ID',
       type: 'string',
