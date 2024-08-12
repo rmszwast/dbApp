@@ -1,9 +1,9 @@
-/* Natasha & Ryan CSS
+/* Ryan & Natasha CSS
 
 /* Theme: Terminal Window */
 
 /*   ----- Imports  -----  */
-/*  
+/*  Inspired from ~
     Source: https://css-tricks.com/old-timey-terminal-styling/
 */
 
@@ -19,18 +19,8 @@
     --lightGreenTransparent: #91f296e6;
   }
 
-  body {
-/*    background-color: var(--terminalGrey);
-    color: var(--neonGreen) ;
-    font-size: 1em;
-    line-height: 1.2;
-    margin:2%;
-    padding:2%;
-    font-family :-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
-      'Ubuntu' 'Cantarell' 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
+
+  body {  
     background-color: black;
     background-image: radial-gradient(
         rgba(0, 150, 0, 0.75), black 120%
@@ -47,16 +37,17 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: repeating-linear-gradient(
+background-image: repeating-linear-gradient
+            (
               0deg,
-              rgba(black, 0.15),
-              rgba(black, 0.15) 1px,
               transparent 1px,
-              transparent 2px
+              transparent 2px,
+              rgba(black, 0.15),
+              rgba(black, 0.15) 1px
             );
     pointer-events: none;
           }
-    }
+    } 
 
 /* This removes the blurry text effect */
     ::selection {
@@ -71,15 +62,11 @@
 
 /*  ----- Page layout blocks -----  */
 header, footer {
-    padding: 0.5em;
     color: var(--neonGreen);
-    background-color: var(--terminalBlack);
-
+    padding: 11px ;
+    font-size: 10px;
   }
   
-  main {
-    background-color: var(--terminalGrey);
-  }
   section {
     padding: 10px;
   }
@@ -104,7 +91,7 @@ header, footer {
     ul {
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding: 5%;
         background-color: var(--terminalGrey);
         color: var(--neonGreen) ;
       }
@@ -123,6 +110,7 @@ header, footer {
     .App-header {
         background-color: #141416;
         min-height: 100vh;
+        max-width: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -167,20 +155,54 @@ a:-webkit-any-link {
     text-shadow: 0 0 10px  #000000;
 }
 
-.css-rbjqkq-MuiDataGrid-root  {
-    background-color: #141416;
+/* Header Tools */
+.FullFeaturedCrudGrid, .css-ptiqhd-MuiSvgIcon-root, .MuiSvgIcon-root, .css-MuiSvgIcon-root {
     color: var(--neonGreen);
 }
 
-.MuiTablePagination-selectLabel, MuiSelect-select-MuiInputBase-input {
+/* General Table formatting */
+.css-rbjqkq-MuiDataGrid-root, .MuiDataGrid-root, .css-MuiDataGrid-root {
+    background-color: #141416;
+    color: var(--neonGreen);
+    align-items: flex;
+    justify-content: center;
+/* This isn't cooperating
+    padding-left: 5%;
+    padding-right: 5%;
+*/
+}
+
+.MuiTablePagination-selectLabel, .MuiSelect-select-MuiInputBase-input {
     background-color: #141416;
     color: var(--neonGreen);
 }
-.MuiButtonBase-root-MuiIconButton-root, MuiList-root-MuiMenu-list
+.MuiButtonBase-root-MuiIconButton-root, .MuiList-root-MuiMenu-list, .css-16mfp94-MuiTablePagination-root .MuiTablePagination-input, .MuiTablePagination-root, .css-MuiTablePagination-root 
 {
     background-color: black;
     color: green;
 }
+
+.css-levciy-MuiTablePagination-displayedRows, .cssMuiTablePagination-displayedRows {
+    background-color: black;
+    color: var(--neonGreen);
+}
+
+/* Table Formatting and Selection for Insert, Edit, Ect */
+.css-1jlz3st, .css-rbjqkq-MuiDataGrid-root, .MuiDataGrid-row--editing, .MuiDataGrid-cell, .css-1b74o31-MuiInputBase-root-MuiDataGrid-editInputCell {
+  color: var(--neonGreen);
+  text-shadow: none;
+}
+
+/* Scrollbar */
+.MuiDataGrid-scrollbar, .MuiDataGrid-scrollbar--horizontal, .css-1rtad1 {
+  margin: auto;
+  padding: 0;
+  align-items: center;
+  overflow-y: auto;
+  position: sticky;
+
+}
+
 .App {
     ul {
         list-style-type: none;

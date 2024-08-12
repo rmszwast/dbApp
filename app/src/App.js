@@ -60,6 +60,10 @@ export default function App() {
            <Route path="/developer-technologies" element={<DevTechnologies getRows={getRows} getCol={getCol} />} />
         </Routes>
       </Router>
+      <footer>
+            <p> &copy; 2024 Ryan Szwast & Natasha Pavelek</p>
+        </footer>
     </div>
   );
+  
 }
