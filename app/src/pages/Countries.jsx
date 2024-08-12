@@ -63,14 +63,8 @@ export default function Countries({getRows, getCol}) {
         process.env.REACT_APP_API_URL + path,
         {
           Name: newRow.Name,
-        },
-        {
           Population: newRow.Population,
-        },
-        {
           CurrencyName: newRow.CurrencyName,
-        },
-        {
           InnovationIndex: newRow.InnovationIndex,
         },
       )
