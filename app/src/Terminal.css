@@ -185,6 +185,7 @@ a:-webkit-any-link {
 .css-levciy-MuiTablePagination-displayedRows, .cssMuiTablePagination-displayedRows {
     background-color: black;
     color: var(--neonGreen);
+
 }
 
 /* Table Formatting and Selection for Insert, Edit, Ect */
@@ -200,8 +201,13 @@ a:-webkit-any-link {
   align-items: center;
   overflow-y: auto;
   position: sticky;
-
 }
+
+/* Drop Down */
+.css-g3hgs1-MuiBackdrop-root-MuiModal-backdrop, .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  text-shadow: none;
+}
+
 
 .App {
     ul {
