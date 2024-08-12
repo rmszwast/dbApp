@@ -23,7 +23,7 @@ app.use("/", (req, res, next) => {
 });
 
 // Serve homepage
-app.use(express.static("../app/build"));
+app.use(express.static(path.join(__dirname, "..", "app", "build")));
 
 // Parse incoming request with JSON payloads.
 app.use(express.json());
